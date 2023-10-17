@@ -96,7 +96,7 @@ class SceneMain extends Phaser.Scene {
         // this.face.x=game.config.width/2;
         // this.face.y=game.config.height/2;
 
-        this.text1=this.add.text(200,300, "Hello!", {fontFamily: 'Anton', color: 'grey'})
+        this.text1=this.add.text(200,300, "Hello!", {fontFamily: 'Indie Flower', color: '#00FF00', fontSize: '40px'})
         this.text1.setOrigin(0.5, 0.5);
     }
     onDown()
@@ -115,14 +115,15 @@ class SceneMain extends Phaser.Scene {
             targets: this.char,
             duration: 5000,
             x: game.config.width,
-            y:0,
+            y: game.config.height,
             alpha:0,
-            onComplete: this.onCompleteHandler.bind(this),
-            onCompleteParams: [this]
+            onComplete: this.onCompleteHandler.bind(this)
+            //onCompleteParams: [this]
         });
     }
 
     onCompleteHandler(tween, targets, scope) {
+        console.log(targets);
         let char = targets[0];
         char.x = 0;
         char.y=game.config.height/2;
