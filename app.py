@@ -17,6 +17,11 @@ def first_game():
 def road_rush():
     return render_template("road_rush.html")
 
+# Based off of https://phaser.io/tutorials/getting-started-phaser3/part5
+@app.route("/phaser5")
+def phaser3p5():
+    return render_template("phaser3p5.html")
+
 # @app.route("/super-mario")
 # def super_mario():
 #     return render_template("super_mario.html")
