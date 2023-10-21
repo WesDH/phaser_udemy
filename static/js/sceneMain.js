@@ -35,6 +35,7 @@ class SceneMain extends Phaser.Scene {
         //define objects
 
         this.catSound = this.sound.add('cat');
+        this.catSound.resume();
         this.catSound.play();
 
         //usual way to add images
@@ -96,7 +97,7 @@ class SceneMain extends Phaser.Scene {
         // this.face.x=game.config.width/2;
         // this.face.y=game.config.height/2;
 
-        this.text1=this.add.text(200,300, "Hello!", {fontFamily: 'Indie Flower', color: '#00FF00', fontSize: '40px'})
+        this.text1=this.add.text(200,300, "Hello This is test TEXT!", {fontFamily: 'Flamenco', color: '#00FF00', fontSize: '40px'})
         this.text1.setOrigin(0.5, 0.5);
     }
     onDown()

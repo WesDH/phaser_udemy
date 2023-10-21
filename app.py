@@ -15,12 +15,28 @@ def first_game():
 # Based off of http://phaser.io/tutorials/making-your-first-phaser-3-game/
 @app.route("/rr")
 def road_rush():
-    return render_template("road_rush.html")
+    return render_template("roadrush.html")
 
 # Based off of https://phaser.io/tutorials/getting-started-phaser3/part5
-@app.route("/phaser5")
+@app.route("/phaser53")
 def phaser3p5():
     return render_template("phaser3p5.html")
+
+
+# Based off of https://phaser.io/tutorials/making-your-first-phaser-3-game/part1
+@app.route("/phaserio_firstgame")
+def phaserio_firstgame():
+    return render_template("phaserio_firstgame.html")
+
+# Based off of https://www.youtube.com/watch?v=lmJdFa3-BIo
+@app.route("/tile_map_test")
+def tile_map_test():
+    return render_template("tile_map_test.html")
+
+# Based off of https://www.youtube.com/watch?v=lmJdFa3-BIo
+@app.route("/tile_map_poc")
+def tile_map_poc():
+    return render_template("tile_map_poc.html")
 
 # @app.route("/super-mario")
 # def super_mario():

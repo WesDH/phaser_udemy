@@ -1,5 +1,5 @@
 WebFontConfig = {
-google: { families: ["Fresca","Flamenco","Indie Flower",'Anton'] }
+google: { families: ["Fresca","Flamenco","Indie Flower",'Yuji Hentaigana Akari'] }
 };
 (function() {
 let wf = document.createElement('script');
