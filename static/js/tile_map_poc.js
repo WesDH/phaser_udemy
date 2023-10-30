@@ -26,10 +26,8 @@ function preload ()
     this.load.image("face", "static/images/face.png");
 }
 
-// var platforms;
 
-function create ()
-{
+function create () {
     // Manual method:
     // let array = [[0, 1, 2], [0, 1, 2], [0, 1, 2], [0, 1, 2]];
     // const map = this.make.tilemap({ data: array, tileWidth: 64, tileHeight: 64});
@@ -44,10 +42,6 @@ function create ()
     const path = map.createLayer("path", tileset, 0, 0);
     const start_end = map.createLayer("start_end", tileset, 0, 0);
     const props = map.createLayer("props", tileset, 0, 0);
-
-
-
-
 }
 
 
