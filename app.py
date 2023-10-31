@@ -43,6 +43,11 @@ def tile_map_poc():
 # def super_mario():
 #     return render_template("super_mario.html")
 
+# https://gamedevacademy.org/how-to-make-tower-defense-game-with-phaser-3/
+@app.route('/td')
+def td():  # put application's code here
+    return render_template("td.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True)
