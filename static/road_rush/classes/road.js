@@ -15,7 +15,7 @@ class Road extends Phaser.GameObjects.Container
 
 
         this.setSize(this.back.displayWidth, game.config.height);
-        console.log(this);
+        //console.log(this);
 
         this.lineGroup = this.scene.add.group();
         this.count = 0;
@@ -38,18 +38,21 @@ class Road extends Phaser.GameObjects.Container
         this.back.on('pointerdown', this.changeLanes.bind(this));
 
         this.addObject(this);
+
+
     }
     addObject() {
         let objs=[
-            {key: "pcar1", speed: 10},
-            {key: "pcar2", speed: 10},
-            {key: "barrier", speed: 21},
-            {key: "cone", speed: 21}
+            {key: "pcar1", speed: 4, scale: 10},
+            {key: "pcar2", speed: 10, scale: 10},
+            {key: "barrier", speed: 21, scale: 8},
+            {key: "cone", speed: 21, scale: 5}
         ];
 
         let index = Math.floor(Math.random()*4);
         let key = objs[index].key;
         let speed = objs[index].speed;
+        let scale = objs[index].scale / 100;
 
         let random_bool = Math.random() < 0.5;
         let lane = this.displayWidth/4;
@@ -59,7 +62,7 @@ class Road extends Phaser.GameObjects.Container
         this.object=this.scene.add.sprite(lane, 0, key);
         this.object.speed=speed;
 
-        Align.scaleToGameW(this.object, .10);
+        Align.scaleToGameW(this.object, scale);
         this.add(this.object);
     }
     moveObject() {
